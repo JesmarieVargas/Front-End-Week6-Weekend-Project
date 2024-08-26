@@ -7,7 +7,7 @@ class NewCustomer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            customer_name: '',
+            customerName: '',
             email: '',
             phone: '',
             errors: {},
@@ -26,7 +26,7 @@ class NewCustomer extends Component {
 
 
             const customerData = {
-                customer_name: this.state.customer_name.trim(),
+                customer_name: this.state.customerName.trim(),
                 email: this.state.email.trim(),
                 phone: this.state.phone.trim()
             };
@@ -49,9 +49,9 @@ class NewCustomer extends Component {
     };
 
     validateForm = () => {
-        const { name, email, phone } = this.state;
+        const { customerName, email, phone } = this.state;
         const errors = {};
-        if (!name) errors.customer_name = 'Name is required';
+        if (!customerName) errors.customerName = 'Name is required';
         if (!email) errors.email = 'Email is required';
         if (!phone) errors.phone = 'Phone is required';
         return errors;
@@ -65,7 +65,7 @@ class NewCustomer extends Component {
     closeModal = () => {
         this.setState({
             showSuccessModal: false,
-            customer_name: '',
+            customerName: '',
             email: '',
             phone: '',
             errors: {},
@@ -75,7 +75,7 @@ class NewCustomer extends Component {
 
     render() {
 
-        const { customer_name, email, phone, isLoading, showSuccessModal, error, errors } = this.state;
+        const { customerName, email, phone, isLoading, showSuccessModal, error, errors } = this.state;
 
         return (
             <Container>
@@ -88,8 +88,8 @@ class NewCustomer extends Component {
                         <Form.Label>
                             Name
                         </Form.Label>
-                        <Form.Control type="text" name="name" value={customer_name} onChange={this.handleChange} />
-                        {errors.name && <div style={{ color: 'red'}}>{errors.name}</div>}
+                        <Form.Control type="text" name="customerName" value={customerName} onChange={this.handleChange} />
+                        {errors.customerName && <div style={{ color: 'red'}}>{errors.customerName}</div>}
                     </Form.Group>
 
                     <Form.Group controlId="formGroupEmail">

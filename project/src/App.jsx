@@ -16,11 +16,11 @@ function App() {
       <NavBar />
       <Routes>
           <Route path='/' element={<Homepage /> } />
-          <Route path='/customers' element={<Customer /> } />
+          <Route path='/customer' element={<Customer /> } />
           <Route path='/products' element={<Products /> } />
-          <Route path='/addcustomers' element={<NewCustomer />} />
-          <Route path='/addproduct' element={<NewProducts />} />
-          <Route path='/order' element={<CreateOrder />} />
+          <Route path='/newcustomer' element={<NewCustomer />} />
+          <Route path='/newproducts' element={<NewProducts />} />
+          <Route path='/orderform' element={<CreateOrder />} />
           <Route path='*' element={<NotFound /> } />       
       </Routes>
     </>

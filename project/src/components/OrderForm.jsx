@@ -26,7 +26,7 @@ class NewOrder extends Component {
 
 
             const orderData = {
-                order_date: this.state.orderDate.trim(),
+                date_ordered: this.state.orderDate.trim(),
                 customer_id: this.state.customerId.trim(),
                 product_id: this.state.productId.trim(),
             };
@@ -95,7 +95,7 @@ class NewOrder extends Component {
 
                     <Form.Group controlId="formGroupProductId">
                         <Form.Label>
-                            Enter The ID of the Product You Would Like to Purchase*
+                            Enter The ID of the Product You Would Like to Purchase
                         </Form.Label>
                         <Form.Control type="text" name="productId" value={productId} onChange={this.handleChange} />
                         {errors.productId && <div style={{ color: 'red'}}>{errors.productId}</div>}

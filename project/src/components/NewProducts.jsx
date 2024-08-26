@@ -28,7 +28,7 @@ class NewProduct extends Component {
             const productData = {
                 product_name: this.state.productName.trim(),
                 price: this.state.price.trim(),
-                product_details: this.state.productDetails.trim()
+                product_description: this.state.productDetails.trim()
             };
 
             axios.post('http://127.0.0.1:5000/products', productData)
